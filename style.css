@@ -1,0 +1,712 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, li, ol {
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+html, body {
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    color: #313131;
+    font-weight: 400;
+    font-family: "Golos Text";
+}
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*технический класс - обертка, margin распологает контейнер посеридине*/
+._container {
+    max-width: 1222px;
+    margin: 0 auto;
+    /*чтобы не было прилипания при адаптиве*/
+    padding: 0 15px;
+    box-sizing: content-box;
+}
+
+
+/*технический располагает картинку как background*/
+._ibg {
+    position: relative;
+}
+._ibg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/*-----HEADER------------------------------------------------------------------*/
+
+.header {
+    padding-top: 26px;
+    background: url(images/header/Group\ 21.png) bottom center / auto 100% no-repeat, linear-gradient(#E9DED4, #E9DED4);
+   
+    min-height: 700px;
+ }
+
+.header__container {
+    margin-bottom: 20px;
+}
+.header__logo {
+
+}
+.logo-header {
+    display: flex;
+    margin-bottom: 52px;
+}
+
+@media (max-width: 376px) {
+    .logo-header {
+        display: flex;
+        margin-bottom: 40px;
+    }
+}
+
+.logo-header__image {
+    flex: 0 0 auto;
+}
+.logo-header__text {
+    flex: 0 0 auto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 108%;
+    color: #595653;
+}
+
+@media (max-width: 376px) {
+    .logo-header__text{
+        font-size: 14px;
+    }
+}
+
+.header__content {
+    max-width: 542px;
+}
+
+.header__title {
+    font-family: Merriweather;
+    font-size: 60px;
+    line-height: 110%;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 376px) {
+    .header__title {
+       font-size: 36px;
+    }
+}
+
+.header__title_center {
+    text-align: center;
+}
+.header__title_end {
+    text-align: end;
+}
+.header__subtitle {
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header__buttons {
+    display: flex;
+   justify-content: space-between;
+}
+
+@media (max-width: 376px) {
+    .header__buttons {
+        flex-direction: column;
+    }
+}
+
+.header__button {
+    flex: 0 1 50%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    padding: 20px;
+    background-color: #1F1F1F;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 66px;
+    text-align: center;
+}
+
+@media (max-width: 376px) {
+    .header__button {
+        flex: 0 1 100%;
+    }
+    .header__button:not(:last-child) {
+        margin-bottom: 14px;
+    }
+}
+
+.header__button:not(:last-child) {
+    margin-right: 16px;
+}
+
+.header__button:hover {
+    background-color: #FBCE51;
+    color: #1F1F1F;
+}
+
+.header__button_border {
+    background-color: #fff;
+    color: #1F1F1F;
+    border: 1px solid #1F1F1F;
+}
+
+.header__button_border:hover {
+    background-color: #1F1F1F;
+    color: #fff;
+}
+
+.header-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* акцент картинки при адаптиве
+    object-position: ;*/
+    z-index: -1;
+    max-height: 700px;
+}
+
+/*---runString----------------------------------------------------*/
+
+.runString {
+    padding: 18px 0;
+}
+
+.runString__list {
+    list-style-type: circle;
+    display: flex;
+}
+.runString__item {
+    font-family: Merriweather;
+    font-size: 22px;
+    line-height: 110%;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 15px;
+    list-style-type: disc;
+}
+
+/*------page--------------------------------------------------------*/
+
+.page {
+}
+
+.page__lecture{}
+
+.page__tournament {
+    margin-bottom: 200px;
+}
+
+.page__transform {
+}
+.page__participants {
+}
+/*------lecture--------------------------------------------------------*/
+.lecture__content {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 64px;
+}
+
+@media (max-width: 992px) {
+    .lecture__content{
+        flex-wrap: wrap;
+    }
+}
+
+.lecture__text {
+    flex: 1 1 auto;
+}
+
+
+.text {
+    font-family: Merriweather;
+    font-size: 36px;
+    line-height: 135%;
+    text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+    .text {
+        font-size: 28px;
+    }
+}
+
+.text a{
+    color: #F54932;
+    font-weight: 700;
+}
+
+.text a:hover {
+    text-decoration: underline;
+}
+
+.lecture__image {
+    flex: 1 1 auto;
+    padding-left: 64px;
+}
+
+
+
+@media (max-width: 992px) {
+    .lecture__image {
+       padding-left: 5px;
+    }
+}
+
+@media (max-width: 376px) {
+    .lecture__image img {
+    max-width: 100%;
+}
+}
+
+
+/*-----tournament-------------------------------------------------------------*/
+
+
+.tournament__container {
+}
+
+.tournament__content {
+    display: flex;
+}
+
+@media (max-width: 1250px) {
+    .tournament__content{
+        flex-wrap: wrap;
+    }    
+}
+.tournament__image {
+    position: relative;
+    top: -37px;
+    left: -27px;
+   
+    transform: scale(41px, 27px);
+    padding-right: 17px;
+}
+
+@media (max-width: 525px) {
+    .tournament__image img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.tournament__body {
+}
+
+.tournament__text {
+    margin-bottom: 60px;
+}
+
+@media (max-width: 525px) {
+    .tournament__text {
+        margin-bottom: 44px;
+    }
+}
+
+@media (max-width: 525px) {
+    .tournament__text {
+        margin-bottom: 24px;
+    }
+}
+
+.table-tournament__text_s{
+    display: flex;
+}
+
+.table-tournament__text_s::after {
+    content: "";
+    display: block;
+    width: 81px;
+    height: 2px;
+    background-color: #F54932;
+    position: relative;
+   left: -220px;
+   top: 12px;
+
+}
+
+.table-tournament__text_position {
+    position: relative;
+    left: 12px;
+}
+
+.tournament__table {
+}
+
+.table-tournament {
+    margin-bottom: 48px;
+}
+.table-tournament__item {
+    display: flex;
+}
+@media (max-width: 992px) {
+    .table-tournament__item {
+        flex-direction: column;
+    }  
+   
+}
+.table-tournament__title {
+    min-width: 306px;
+    font-size: 20px;
+    line-height: 120%;
+    color: #313131;
+    padding: 16px 16px 16px 0;
+}
+@media (max-width: 992px) {
+    .table-tournament__title {
+       
+        padding: 16px 0 12px;
+        }
+    }
+
+.table-tournament__text {
+    min-width: 398px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #313131;
+    border-left: 1px solid #D0D0D0;
+    padding: 16px;
+    
+}
+@media (max-width: 992px) {
+.table-tournament__text {
+    border-left: none;
+    padding: 0 0 16px;
+    }
+}
+.table-tournament__item:not(:last-child) {
+    border-bottom: 1px solid #D0D0D0;
+}
+
+.tournament__link {
+    font-size: 20px;
+    line-height: 120%;
+    color: #3057A2;
+}
+
+/*--------------------------------------------------------------*/
+
+
+.transform {
+}
+.transform__container {
+}
+
+.transform__title {
+    margin-bottom: 54px;
+}
+.header-text {
+    font-family: Merriweather;
+    font-size: 54px;
+    line-height: 120%;
+    max-width: 806px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+@media (max-width: 734px) {
+    .header-text{
+    font-size: 36px;    
+    }
+}
+
+.transform__subtitle {
+    font-size: 20px;
+    line-height: 120%;
+    color: #3057A2;
+    max-width: 280px;
+    font-family: "Golos Text";
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    text-transform: none;
+}
+.transform__body {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 200px;
+    position: relative;
+}
+
+.transform__items {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto 34%;
+    gap: 20px;
+    grid-template-areas: 
+    "one two three"
+    "four five three"
+    "six seven seven";
+    
+}
+.transform__item {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #E9DED4;
+    background-image: /*linear-gradient(#e3d621, #e3d621), url(images/page/bg.png);*/
+    
+}
+
+.transform__number {
+    font-weight: 600;
+    z-index: 2;
+    padding: 11px 4px;
+   
+}
+
+.transform__number:after {
+    content: "";
+    background-color: #fff;
+    width: 36px;
+    height: 36px;
+    display: block;
+    position: relative;
+    top: -28px;
+    left: -12px;
+    z-index: -1;
+    border-radius: 100%;
+    
+}
+.transform__text {
+    
+}
+
+.transform__item_1 {
+    grid-area: one;
+}
+
+.transform__item_2 {
+    grid-area: two;
+}
+.transform__item_3 {
+    grid-area: three;
+}
+.transform__item_4 {
+    grid-area: four;
+}
+.transform__item_5 {
+    grid-area: five;
+}
+.transform__item_6 {
+    grid-area: six;
+}
+.transform__item_7 {
+    grid-area: seven;
+}
+
+.transform__text_7 {
+    max-width: 446px;
+}
+.transform__image {
+    transform: rotate(-15.31deg);
+    position: absolute;
+    top: 40%;
+    left: 70%;
+}
+
+
+@media (max-width: 1230px) {
+    .transform__items {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        justify-content: flex-start;
+    }
+    .transform__item {
+        display: inline-flex;
+        flex: 0 0 100%;
+        width: 335px;
+        min-height: 300px;
+        white-space: normal;
+        padding-top: 62px;
+        margin: 0 20px;
+    }
+    .transform__title {
+        margin-bottom: 12px;
+    }
+    .transform__subtitle{
+        position: static;
+        font-size: 18px;
+        margin-bottom: 148px;
+    }
+    .transform__image {
+        transform: rotate(-5deg);
+        max-width: 335px;
+        top: -60%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+
+/*-----participants-----------------------------------------------*/
+
+
+.participants {
+}
+.participants__container {
+    overflow: hidden;
+}
+
+.participants__header {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.participants__nav {
+    max-width: 151px;
+    font-family: "Golos Text";
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.participants__button {
+    width: 100%;
+    background-color: #fff;
+}
+
+.counter {
+    min-width: 35px;
+    display: flex;
+    padding: 16.5px 14px;
+    box-sizing: content-box;
+}
+.participants__body {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding: 0 -20px;
+    margin-bottom: 140px;
+}
+
+.participants__column {
+    display: inline-block;
+    flex: 0 1 33.334%;
+}
+.participants__column:not(:last-child){
+    margin-right: 20px;
+}
+
+@media (max-width: 1230px) {
+    .participants__column {
+        min-width: 335px;
+        flex: 0 0 100%;
+    }
+    .participants__body {
+        margin-bottom: 40px;
+    }
+    .participants__nav {
+        text-align: center;
+        max-width: 129px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin-bottom: 100px;
+    }
+}
+
+.participants__item {
+    min-width: 394px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.participants__image {
+    margin-bottom: 28px;
+}
+.participants__name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 6px;
+}
+.participants__rang {
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+.participants__btn {
+    display: block;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #3057A2;
+    border: 1px solid #3057A2;
+    border-radius: 62px;
+}
+
+.participants__btn:hover {
+    background-color: #3057A2;
+    color: #fff;
+}
+
+/*----footer------------------------------------------------*/
+
+.footer {
+    background-color: #E9DED4;
+}
+.footer__container {
+    padding: 40px 0 72px 0;
+}
+
+.footer__content {
+    font-size: 16px;
+    line-height: 120%;
+    opacity: 0.7;
+}
+
