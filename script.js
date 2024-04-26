@@ -1,3 +1,5 @@
+//слайдер участники
+
 let btnLeft = document.querySelector('.participants__button_left');
 let btnRight = document.querySelector('.participants__button_right');
 let items = document.querySelectorAll('.participants__column');

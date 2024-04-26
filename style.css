@@ -486,13 +486,17 @@ html, body {
     "six seven seven";
     
 }
-.transform__item {
+.transform__item_cont {
     display: flex;
     align-items: flex-start;
     padding: 20px;
     background-color: #E9DED4;
     background-image: /*linear-gradient(#e3d621, #e3d621), url(images/page/bg.png);*/
     
+}
+
+.transform__item {
+    display: flex;
 }
 
 .transform__number {
@@ -560,14 +564,15 @@ html, body {
         white-space: nowrap;
         justify-content: flex-start;
     }
-    .transform__item {
+    .transform__item_cont {
         display: inline-flex;
+        flex-direction: column;
         flex: 0 0 100%;
-        width: 335px;
+        max-width: 100%;
         min-height: 300px;
         white-space: normal;
         padding-top: 62px;
-        margin: 0 20px;
+        margin: 0;
     }
     .transform__title {
         margin-bottom: 12px;
@@ -578,12 +583,28 @@ html, body {
         margin-bottom: 148px;
     }
     .transform__image {
-        transform: rotate(-5deg);
-        max-width: 335px;
-        top: -60%;
+        transform: rotate(-15deg);
+        max-width: 318px;
+        top: -45%;
         left: 50%;
         transform: translate(-50%);
     }
+    .transform__image img {
+        max-width: 318px;
+    }
+    .transform__body {
+        margin-bottom: 28px;        
+    }
+}
+
+.indicators {
+    list-style: disc;
+    display: ;
+    margin: 13px 16px;
+}
+
+.indicator{    
+    list-style: disc;
 }
 
 
@@ -611,12 +632,15 @@ html, body {
     align-items: center;
 }
 
-
-
 .participants__button {
-    width: 100%;
+    max-width: 36px;
     background-color: #fff;
 }
+
+.participants__button img {
+    width: 100%;
+}
+
 
 .counter {
     min-width: 35px;
