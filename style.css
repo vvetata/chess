@@ -598,9 +598,7 @@ html, body {
 }
 
 .indicators {
-    display: none;
     list-style: disc;
-    display: ;
     margin: 13px 16px;
 }
 
