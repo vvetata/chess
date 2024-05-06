@@ -70,8 +70,7 @@ html, body {
 .header {
     padding-top: 26px;
     background: url(images/header/Group\ 21.png) bottom center / auto 100% no-repeat, linear-gradient(#E9DED4, #E9DED4);
-   
-    min-height: 700px;
+    min-height: 774px;
  }
 
 .header__container {
@@ -93,6 +92,7 @@ html, body {
 }
 
 .logo-header__image {
+    object-position: 0%;
     flex: 0 0 auto;
 }
 .logo-header__text {
@@ -322,16 +322,19 @@ html, body {
 .tournament__image {
     position: relative;
     top: -37px;
-    left: -27px;
-   
+    left: -27px;   
     transform: scale(41px, 27px);
     padding-right: 17px;
 }
 
 @media (max-width: 525px) {
+    .tournament__image {
+        max-width: 335px;
+        left: -17px;
+    }
     .tournament__image img {
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -399,7 +402,6 @@ html, body {
 }
 @media (max-width: 992px) {
     .table-tournament__title {
-       
         padding: 16px 0 12px;
         }
     }
@@ -484,19 +486,16 @@ html, body {
     "one two three"
     "four five three"
     "six seven seven";
-    
-}
-.transform__item_cont {
-    display: flex;
-    align-items: flex-start;
-    padding: 20px;
-    background-color: #E9DED4;
-    background-image: /*linear-gradient(#e3d621, #e3d621), url(images/page/bg.png);*/
-    
 }
 
-.transform__item {
+.transform__item{
+    background-color: #E9DED4;
+    background-image: /*linear-gradient(#e3d621, #e3d621), url(images/page/bg.png);*/
+}
+
+.transform__content {
     display: flex;
+    padding: 20px;
 }
 
 .transform__number {
@@ -520,7 +519,6 @@ html, body {
     
 }
 .transform__text {
-    
 }
 
 .transform__item_1 {
@@ -559,7 +557,6 @@ html, body {
     display: none;
 }
 
-
 @media (max-width: 1230px) {
     /*адаптив хэдэра*/
     .transform__title {
@@ -572,7 +569,7 @@ html, body {
     }
     .transform__image {
         transform: rotate(-15deg);
-        max-width: 318px;
+        max-width: 335px;
         top: -25%;
         left: 50%;
         transform: translate(-50%);
@@ -593,19 +590,26 @@ html, body {
         justify-content: space-between;
         position: relative;
         left: 0;
+        transition: 5ms;
     }
-    .transform__item_cont {
-        display: inline-flex;
+
+    .transform__item{
+        display: flex;
         flex-direction: column;
-        flex: 0 0 100%;
-        max-width: 100%;
+        flex-wrap: wrap;
+        flex: 1 0 100%;
+        min-width: 335px;
         min-height: 300px;
-        white-space: normal;
-        padding-top: 62px;
-        margin: 0;
+        
     }
-    
-   
+
+    .transform__content {
+        padding-top: 62px;
+        white-space: normal;
+    }
+    .transform__text_7 {
+        max-width: none;
+    }
     .transform__nav {
         display: block;
         text-align: center;
@@ -624,7 +628,9 @@ html, body {
         height: 36px;
         border-radius: 50%;
     }
-    
+    .nav-transform__button_prew {
+        background-color: #D9D9D9;
+    }
     .nav-transform__indicators {
         margin: 0 16px;
     }
@@ -698,6 +704,7 @@ html, body {
     justify-content: flex-start;
     padding: 0 -20px;
     margin-bottom: 140px;
+    transition: 1s;
 }
 
 .participants__column {
