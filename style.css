@@ -550,30 +550,18 @@ html, body {
     max-width: 446px;
 }
 .transform__image {
-    transform: rotate(-15.31deg);
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 70%;
+}
+
+.transform__nav {
+    display: none;
 }
 
 
 @media (max-width: 1230px) {
-    .transform__items {
-        display: flex;
-        overflow: hidden;
-        white-space: nowrap;
-        justify-content: flex-start;
-    }
-    .transform__item_cont {
-        display: inline-flex;
-        flex-direction: column;
-        flex: 0 0 100%;
-        max-width: 100%;
-        min-height: 300px;
-        white-space: normal;
-        padding-top: 62px;
-        margin: 0;
-    }
+    /*адаптив хэдэра*/
     .transform__title {
         margin-bottom: 12px;
     }
@@ -585,27 +573,83 @@ html, body {
     .transform__image {
         transform: rotate(-15deg);
         max-width: 318px;
-        top: -45%;
+        top: -25%;
         left: 50%;
         transform: translate(-50%);
     }
     .transform__image img {
         max-width: 318px;
     }
+ 
+    /*адаптив слайдера*/
     .transform__body {
         margin-bottom: 28px;        
     }
+
+    .transform__items {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        justify-content: space-between;
+        position: relative;
+        left: 0;
+    }
+    .transform__item_cont {
+        display: inline-flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-height: 300px;
+        white-space: normal;
+        padding-top: 62px;
+        margin: 0;
+    }
+    
+   
+    .transform__nav {
+        display: block;
+        text-align: center;
+        min-width: 178px;
+        padding: 28px 0 120px 0;
+    }
+    
+    .nav-transform__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-transform__button {
+        background-color: #363636;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+    }
+    
+    .nav-transform__indicators {
+        margin: 0 16px;
+    }
+    .nav-transform__indicator {
+        background-color: #fff;
+        color: #D9D9D9;
+    }
+    .nav-transform__indicators_active {
+        color: #313131;
+    }
+    
 }
 
-.indicators {
-    list-style: disc;
-    margin: 13px 16px;
+/*.nav-transform__indicator_1 {
 }
-
-.indicator{    
-    list-style: disc;
+.nav-transform__indicator_2 {
 }
-
+.nav-transform__indicator_3 {
+}
+.nav-transform__indicator_4 {
+}
+.nav-transform__indicator_5 {
+}
+.nav-transform__button_next {
+}*/
 
 /*-----participants-----------------------------------------------*/
 
