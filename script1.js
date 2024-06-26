@@ -102,10 +102,3 @@ if (indicators[0].classList.contains('nav-transform__indicators_active')) {
 }
 
 
-/*
-const nextSlide = () => {
-    position = 537;
-    itemsGrid.style.left = -position + 'px';
-}
-
-btnNext.addEventListener('click', nextSlide);*/
